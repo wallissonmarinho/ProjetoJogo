@@ -1,16 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    //public int vida;
-    //public string nome;
 
-    //public float tempo;
-    //public float distancia;
-    //public float velocidade; 
-    
+    public int lives;
+    public Text TextLives;
     public float forcaPulo;
     public float vMaxima;
     private float movimento;
@@ -18,7 +15,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        //VerificaVelocidade();
+        TextLives.text = lives.ToString();
     }
 
 
