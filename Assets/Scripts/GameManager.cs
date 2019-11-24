@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject PainelCompleto;
+    public bool isPause = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,19 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    //metodo responsavel para pausar o jogo
+    public void Pause()
+    {
+        if(isPause)
+        {
+            PainelCompleto.SetActive(false);
+            isPause = false;
+        }else
+        {
+            PainelCompleto.SetActive(true);
+            isPause = true;
+        }
     }
 }
