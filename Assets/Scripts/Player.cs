@@ -56,5 +56,23 @@ public class Player : MonoBehaviour
             
         }
     }
+    //Metodo para saber se estar no chão e se não, o playr não pode pular
+    void OnCollisionEnter2D(Collision2D collision2D)
+    {
+        if(collision2D.gameObject.CompareTag("Plataforma"))
+        {
+            //criar logica para pulo
+        }
+        
+        if(collision2D.gameObject.CompareTag("Plataforma"))
+        {
+            //criar logica para perder vida
+        }
+        Debug.Log("NO CHÃO"+collision2D.gameObject.tag);
+    }
+    void OnCollisionExit2D(Collision2D collision2D)
+    {
+        Debug.Log("NO AR"+collision2D.gameObject.tag);
+    }
 
 }
