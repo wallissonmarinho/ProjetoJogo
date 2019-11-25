@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
             rigidbody.AddForce(new Vector2(0, forcaPulo));
             
         }
-
+        //Jump controller se ele estiver no chão animação jumping desativado
         if(isGrounded)
         {
             GetComponent<Animator>().SetBool("jumping", false);
