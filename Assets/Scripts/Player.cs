@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
+    public GameObject JumpAudio;
     public int lives;
     public Text TextLives;
     public float forcaPulo;
@@ -54,6 +55,7 @@ public class Player : MonoBehaviour
         {
             rigidbody.AddForce(new Vector2(0, forcaPulo));
             
+            GetComponent<AudioSource>().Play();
         }
     }
     //Metodo para saber se estar no chão e se não, o playr não pode pular
