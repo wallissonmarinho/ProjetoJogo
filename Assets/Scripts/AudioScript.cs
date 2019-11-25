@@ -19,8 +19,11 @@ public class AudioScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Verifica se o Player esta no chão
         isGround = P.GetComponent<Player>().isGrounded;
+
         MusicManager();
+
         MusicList();
         
     }

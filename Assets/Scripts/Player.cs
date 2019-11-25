@@ -57,8 +57,17 @@ public class Player : MonoBehaviour
             rigidbody.AddForce(new Vector2(0, forcaPulo));
             
         }
+
+        if(isGrounded)
+        {
+            GetComponent<Animator>().SetBool("jumping", false);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("jumping", true);
+        }
     }
-    //Metodo para saber se estar no chão e se não, o playr não pode pular
+    //Metodo para saber se estar no chão e se não, o player não pode pular
     void OnCollisionEnter2D(Collision2D collision2D)
     {
         if(collision2D.gameObject.CompareTag("Plataforma"))
