@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class AudioScript : MonoBehaviour
 {
+    public GameObject P;
     public AudioClip Jump;
     public AudioClip Teste;
     public AudioSource MusicSourc;
+    private bool isGround;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +19,16 @@ public class AudioScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGround = P.GetComponent<Player>().isGrounded;
         MusicManager();
         MusicList();
         
     }
+
     //Controla quail efeito vai ser tocada
     void MusicManager()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             MusicSourc.clip = Jump;
         }
@@ -35,7 +40,7 @@ public class AudioScript : MonoBehaviour
     //Função que executa a reprodução dos efeitos
     void MusicList()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             MusicSourc.Play();
         }
@@ -44,4 +49,5 @@ public class AudioScript : MonoBehaviour
             MusicSourc.Play();
         }
     }
+    
 }

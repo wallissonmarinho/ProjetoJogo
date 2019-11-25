@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float forcaPulo;
     public float vMaxima;
     private float movimento;
+    public bool isGrounded;
     
 
     void Start()
@@ -51,11 +52,10 @@ public class Player : MonoBehaviour
             GetComponent<Animator>().SetBool("Walking", false);
         }
         //Função para pular
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rigidbody.AddForce(new Vector2(0, forcaPulo));
             
-            GetComponent<AudioSource>().Play();
         }
     }
     //Metodo para saber se estar no chão e se não, o playr não pode pular
@@ -63,17 +63,14 @@ public class Player : MonoBehaviour
     {
         if(collision2D.gameObject.CompareTag("Plataforma"))
         {
-            //criar logica para pulo
+           isGrounded = true;
+           Debug.Log("NO CHÃO"+collision2D.gameObject.tag);
         }
         
-        if(collision2D.gameObject.CompareTag("Plataforma"))
-        {
-            //criar logica para perder vida
-        }
-        Debug.Log("NO CHÃO"+collision2D.gameObject.tag);
     }
     void OnCollisionExit2D(Collision2D collision2D)
     {
+        isGrounded = false;
         Debug.Log("NO AR"+collision2D.gameObject.tag);
     }
 

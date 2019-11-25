@@ -1385,6 +1385,7 @@ MonoBehaviour:
   TextLives: {fileID: 1183608177}
   forcaPulo: 300
   vMaxima: 3
+  isGrounded: 0
 --- !u!95 &369890668
 Animator:
   serializedVersion: 3
@@ -1817,6 +1818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9fb2c52a8482044bffc59d68252f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P: {fileID: 369890662}
   Jump: {fileID: 8300000, guid: 49aeb3059dbca98478b5354f6a385c88, type: 3}
   Teste: {fileID: 8300000, guid: cb81afec29be79d4eb5700746e24a0d5, type: 3}
   MusicSourc: {fileID: 619242665}
@@ -3564,7 +3566,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.167
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
