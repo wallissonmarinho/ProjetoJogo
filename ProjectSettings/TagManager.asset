@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Plataforma
   - Tilemap
+  - Fogo
+  - ArmarioBig
   layers:
   - Default
   - TransparentFX

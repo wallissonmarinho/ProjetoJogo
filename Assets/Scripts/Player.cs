@@ -67,13 +67,24 @@ public class Player : MonoBehaviour
             GetComponent<Animator>().SetBool("jumping", true);
         }
     }
-    //Metodo para saber se estar no chão e se não, o player não pode pular
+    //Metodo para saber se o player esta em contato com objetos
     void OnCollisionEnter2D(Collision2D collision2D)
     {
-        if(collision2D.gameObject.CompareTag("Plataforma"))
+        //Metodo para saber se estar no chão e se não, o player não pode pular
+        if(collision2D.gameObject.CompareTag("Plataforma") || collision2D.gameObject.CompareTag("Fogo") || collision2D.gameObject.CompareTag("ArmarioBig"))
         {
            isGrounded = true;
            Debug.Log("NO CHÃO"+collision2D.gameObject.tag);
+        }
+        //Metodo para perder vida quando entrar em contato com inimigos
+        if(collision2D.gameObject.CompareTag("Fogo"))
+        {
+           lives--;
+           TextLives.text = lives.ToString();
+           if(lives==0)
+           {
+               //logica para morrer
+           }
         }
         
     }
@@ -81,6 +92,12 @@ public class Player : MonoBehaviour
     {
         isGrounded = false;
         Debug.Log("NO AR"+collision2D.gameObject.tag);
+
+        if(collision2D.gameObject.CompareTag("ArmarioBig") || collision2D.gameObject.CompareTag("Fogo"))
+        {
+        isGrounded = true;
+           Debug.Log("NO CHÃO"+collision2D.gameObject.tag);
+        }
     }
 
 }
