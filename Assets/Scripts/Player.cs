@@ -6,14 +6,12 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    public GameObject JumpAudio;
     public int lives;
     public Text TextLives;
     public float forcaPulo;
     public float vMaxima;
     private float movimento;
     public bool isGrounded;
-    
 
     void Start()
     {
@@ -24,6 +22,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movimentos();
+        Posicao();
     }
 
     void Movimentos()
@@ -65,6 +64,19 @@ public class Player : MonoBehaviour
         else
         {
             GetComponent<Animator>().SetBool("jumping", true);
+        }
+    }
+    public void Posicao() {
+        if(transform.position.y >= 4f) {
+            transform.position = new Vector2(transform.position.x, 4f);
+        }
+        if(transform.position.x >= 161.8124f) {
+            transform.position = new Vector2(161.8124f, transform.position.y);
+
+        }
+        if(transform.position.x <= -9.251209f) {
+            transform.position = new Vector2(-9.251209f, transform.position.y);
+            
         }
     }
     //Metodo para saber se o player esta em contato com objetos
