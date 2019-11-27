@@ -25,10 +25,12 @@ public class GameManager : MonoBehaviour
         {
             PainelCompleto.SetActive(false);
             isPause = false;
+            Time.timeScale = 1;
         }else
         {
             PainelCompleto.SetActive(true);
             isPause = true;
+            Time.timeScale = 0;
         }
     }
 }
