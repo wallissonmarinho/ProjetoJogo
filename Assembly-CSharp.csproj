@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AudioScript.cs" />
      <Compile Include="Assets\Scripts\Camera.cs" />
+     <Compile Include="Assets\Scripts\FacaController.cs" />
      <Compile Include="Assets\Scripts\Foguinho.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />

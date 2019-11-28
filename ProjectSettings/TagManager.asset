@@ -8,6 +8,8 @@ TagManager:
   - Tilemap
   - Fogo
   - ArmarioBig
+  - Faca
+  - Armadilha
   layers:
   - Default
   - TransparentFX

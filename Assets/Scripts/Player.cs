@@ -7,11 +7,14 @@ public class Player : MonoBehaviour
 {
 
     public int lives;
+    public string Nome;
     public Text TextLives;
     public float forcaPulo;
     public float vMaxima;
     private float movimento;
     public bool isGrounded;
+    public bool isGroundedEnemy;
+    public GameObject prefabInimigo;
 
     void Start()
     {
@@ -23,6 +26,15 @@ public class Player : MonoBehaviour
     {
         Movimentos();
         Posicao();
+        Teste();
+    }
+    void Teste()
+    {
+        
+        if(prefabInimigo.name == "faca1")
+        {
+            Debug.Log("Deu certooooooooooooo");
+        }
     }
 
     void Movimentos()
@@ -112,4 +124,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        
+        Debug.Log("Colidiu com :"+collider.gameObject.name);
+
+        if(collider.gameObject.CompareTag("Armadilha"))
+        {
+            isGroundedEnemy = true;
+            lives--;
+            TextLives.text = lives.ToString();
+        }
+    }
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        //isGroundedEnemy = false;
+    }
 }
