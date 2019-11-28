@@ -129,6 +129,11 @@ public class Player : MonoBehaviour
         
         Debug.Log("Colidiu com :"+collider.gameObject.name);
 
+        if(collider.gameObject.CompareTag("Faca"))
+        {
+            isGroundedEnemy = true;
+        }
+
         if(collider.gameObject.CompareTag("Armadilha"))
         {
             isGroundedEnemy = true;
