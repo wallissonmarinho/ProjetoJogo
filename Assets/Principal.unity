@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 119039893}
   m_Layer: 0
   m_Name: Torradeira
-  m_TagString: Untagged
+  m_TagString: Torradeira
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 155.4, y: -1.61, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1618255916}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -260,6 +261,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbe8fee3c06dd54c84493f1209334e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextLives: {fileID: 0}
+  lives: 5
+  Tiro: 0
+  VerificaInimigo: {fileID: 1618255913}
+  isGround: 0
+  prefabTiro: {fileID: 6344572243052817101, guid: 9d1d7eaa82b64674492e145a8b96efb9,
+    type: 3}
+  tempoTiro: 2
+  forcaTiro: -900
 --- !u!1001 &128904675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,6 +341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -405,6 +420,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -1017,6 +1037,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -2072,7 +2097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d57ef32191db34983e99768a0678a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 10
+  lives: 20
   Nome: 
   TextLives: {fileID: 1183608177}
   forcaPulo: 300
@@ -2420,6 +2445,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1 &458472911
@@ -2562,6 +2592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -3262,6 +3297,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1001 &701389568
@@ -3578,6 +3618,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!4 &777761080 stripped
@@ -3807,6 +3852,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!4 &871494203 stripped
@@ -3886,6 +3936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -3967,6 +4022,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1001 &1011015412
@@ -4040,6 +4100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -4723,6 +4788,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1 &1277173524
@@ -4985,6 +5055,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1001 &1291023835
@@ -5139,6 +5214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -5995,6 +6075,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1 &1459918295
@@ -6255,6 +6340,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1001 &1592529742
@@ -6398,8 +6488,84 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
+--- !u!1 &1618255913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618255916}
+  - component: {fileID: 1618255915}
+  - component: {fileID: 1618255914}
+  m_Layer: 0
+  m_Name: TiroControler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1618255914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618255913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0e9ebf1aeafa6439e8fb2c7b2f045e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGroundedEnemy: 0
+--- !u!61 &1618255915
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618255913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.6362853, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.727429, y: 5}
+  m_EdgeRadius: 0
+--- !u!4 &1618255916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618255913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.76, y: 0.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 119039892}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1629078167
 GameObject:
   m_ObjectHideFlags: 0
@@ -6716,6 +6882,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!4 &1660288733 stripped
@@ -6795,6 +6966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -7184,6 +7360,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1001 &1851725101
@@ -7396,6 +7577,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1 &1882391584
@@ -7588,6 +7774,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1001 &1949966292
@@ -7661,6 +7852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
@@ -7828,6 +8024,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!1 &2001785912
@@ -7844,7 +8045,7 @@ GameObject:
   - component: {fileID: 2001785916}
   m_Layer: 0
   m_Name: pao
-  m_TagString: Tilemap
+  m_TagString: ArmarioBig
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8100,6 +8301,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}
 --- !u!4 &2059438570 stripped
@@ -8254,6 +8460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615858226790216536, guid: 1d1e14da2b540964d83d97626370ae89,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e14da2b540964d83d97626370ae89, type: 3}

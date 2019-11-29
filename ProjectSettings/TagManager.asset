@@ -10,6 +10,7 @@ TagManager:
   - ArmarioBig
   - Faca
   - Armadilha
+  - Torradeira
   layers:
   - Default
   - TransparentFX

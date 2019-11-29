@@ -61,7 +61,9 @@
      <Compile Include="Assets\Scripts\Foguinho.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\TiroFaca.cs" />
      <Compile Include="Assets\Scripts\Torradeira.cs" />
+     <Compile Include="Assets\Scripts\VerificaFaca.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/walli/ProjetoJogo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

@@ -48,4 +48,20 @@ public class Foguinho : MonoBehaviour
            colidde = false;
         }
     }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+
+        if(col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Fogo"))
+        {
+            colidde = true;
+        }
+
+    }
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if(col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Fogo"))
+        {
+            colidde = false;
+        }
+    }
 }

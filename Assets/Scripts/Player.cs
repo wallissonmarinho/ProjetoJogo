@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision2D)
     {
         //Metodo para saber se estar no chão e se não, o player não pode pular
-        if(collision2D.gameObject.CompareTag("Plataforma") || collision2D.gameObject.CompareTag("Fogo") || collision2D.gameObject.CompareTag("ArmarioBig"))
+        if(collision2D.gameObject.CompareTag("Plataforma") || collision2D.gameObject.CompareTag("Fogo") || collision2D.gameObject.CompareTag("ArmarioBig") || collision2D.gameObject.CompareTag("Torradeira"))
         {
            isGrounded = true;
            Debug.Log("NO CHÃO"+collision2D.gameObject.tag);
@@ -117,9 +117,9 @@ public class Player : MonoBehaviour
         isGrounded = false;
         Debug.Log("NO AR"+collision2D.gameObject.tag);
 
-        if(collision2D.gameObject.CompareTag("ArmarioBig") || collision2D.gameObject.CompareTag("Fogo"))
+        if(collision2D.gameObject.CompareTag("ArmarioBig") || collision2D.gameObject.CompareTag("Fogo") || collision2D.gameObject.CompareTag("Torradeira"))
         {
-        isGrounded = true;
+        isGrounded = false;
            Debug.Log("NO CHÃO"+collision2D.gameObject.tag);
         }
     }
@@ -137,6 +137,11 @@ public class Player : MonoBehaviour
         if(collider.gameObject.CompareTag("Armadilha"))
         {
             isGroundedEnemy = true;
+            lives--;
+            TextLives.text = lives.ToString();
+        }
+        if(collider.gameObject.CompareTag("Fogo"))
+        {
             lives--;
             TextLives.text = lives.ToString();
         }
