@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Torradeira : MonoBehaviour
 {
+	public GameObject PainelCompleto;
 	public Text TextLives;
 	public int lives;
 	public bool Tiro;
@@ -38,6 +39,8 @@ public class Torradeira : MonoBehaviour
 		if(lives <= 0)
            {
             	Destroy(gameObject);
+				PainelCompleto.SetActive(true);
+            	Time.timeScale = 0;
            }
 	}
 	

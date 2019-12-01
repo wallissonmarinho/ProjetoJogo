@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameObject PainelCompleto;
 
     public int lives;
     public string Nome;
@@ -105,9 +106,11 @@ public class Player : MonoBehaviour
         {
            lives--;
            TextLives.text = lives.ToString();
-           if(lives==0)
-           {
-               //logica para morrer
+           if(lives < 1)
+           {    
+                PainelCompleto.SetActive(true);
+            	Time.timeScale = 0;
+                Destroy(gameObject);
            }
         }
         
@@ -139,11 +142,25 @@ public class Player : MonoBehaviour
             isGroundedEnemy = true;
             lives--;
             TextLives.text = lives.ToString();
+            
+            if(lives < 1)
+           {    
+                PainelCompleto.SetActive(true);
+            	Time.timeScale = 0;
+                Destroy(gameObject);
+           }
         }
         if(collider.gameObject.CompareTag("Fogo"))
         {
             lives--;
             TextLives.text = lives.ToString();
+            
+            if(lives < 1)
+           {    
+                PainelCompleto.SetActive(true);
+            	Time.timeScale = 0;
+                Destroy(gameObject);
+           }
         }
     }
     void OnTriggerExit2D(Collider2D collider)
